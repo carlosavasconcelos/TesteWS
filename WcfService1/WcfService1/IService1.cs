@@ -21,7 +21,7 @@ namespace WcfService1
 
 
         [OperationContract]
-        bool SetDados(Lista dados);
+        bool SetDados(string latitude, string longitude, string status, string date);
 
 
         [OperationContract]

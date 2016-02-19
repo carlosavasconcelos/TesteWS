@@ -27,24 +27,32 @@ namespace WcfService1
 
 
        
-        public bool SetDados(Lista dados)
+        public bool SetDados(string latitude , string longitude , string status , string date )
         {
-            var id = Guid.NewGuid();
-
-            // insert
-            using (var db = new  db7e70c0cf078247eab177a5b0012f25efEntities ())
+            try
             {
-                tbDados data = new tbDados();
-                data.latitude= dados.Latitude.ToString();
-                data.longitude = dados.Longitude.ToString();
-                data.status = dados.Status;
-                data.data = dados.Data;
+                using (var db = new db7e70c0cf078247eab177a5b0012f25efEntities())
+                {
+                    tbDados data = new tbDados();
+                    data.latitude = latitude;
+                    data.longitude = longitude;
+                    data.status = status;
+                    data.data = date;
 
-                db.tbDados.Add(data );
-                db.SaveChanges();
+                    db.tbDados.Add(data);
+                    db.SaveChanges();
+                }
+                return true;
             }
+            catch (Exception)
+            {
 
-            return true;
+                return false;
+            }
+            // insert
+           
+
+           
         }
 
 

@@ -3,3 +3,5 @@ C:\Users\carlos.vasconcelos\Documents\GitHub\TesteWS\WcfService1\WcfService1\bin
 C:\Users\carlos.vasconcelos\Documents\GitHub\TesteWS\WcfService1\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
 C:\Users\carlos.vasconcelos\Documents\GitHub\TesteWS\WcfService1\WcfService1\obj\Debug\WcfService1.dll
 C:\Users\carlos.vasconcelos\Documents\GitHub\TesteWS\WcfService1\WcfService1\obj\Debug\WcfService1.pdb
+C:\Users\carlos.vasconcelos\Documents\GitHub\TesteWS\WcfService1\WcfService1\bin\EntityFramework.dll
+C:\Users\carlos.vasconcelos\Documents\GitHub\TesteWS\WcfService1\WcfService1\bin\EntityFramework.xml
