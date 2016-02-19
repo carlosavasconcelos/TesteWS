@@ -17,6 +17,37 @@ namespace WcfService1
             return string.Format("You entered: {0}", value);
         }
 
+        public List<Lista> GetDados()
+        {
+
+            
+            return new List<Lista>();
+        
+        }
+
+
+       
+        public bool SetDados(Lista dados)
+        {
+            var id = Guid.NewGuid();
+
+            // insert
+            using (var db = new  db7e70c0cf078247eab177a5b0012f25efEntities ())
+            {
+                tbDados data = new tbDados();
+                data.latitude= dados.Latitude.ToString();
+                data.longitude = dados.Longitude.ToString();
+                data.status = dados.Status;
+                data.data = dados.Data;
+
+                db.tbDados.Add(data );
+                db.SaveChanges();
+            }
+
+            return true;
+        }
+
+
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)

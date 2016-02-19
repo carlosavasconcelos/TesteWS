@@ -17,6 +17,14 @@ namespace WcfService1
         string GetData(int value);
 
         [OperationContract]
+        List<Lista> GetDados();
+
+
+        [OperationContract]
+        bool SetDados(Lista dados);
+
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here

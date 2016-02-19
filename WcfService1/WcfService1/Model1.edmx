@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="db7e70c0cf078247eab177a5b0012f25efModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="db7e70c0cf078247eab177a5b0012f25efModelStoreContainer">
+          <EntitySet Name="tbDados" EntityType="db7e70c0cf078247eab177a5b0012f25efModel.Store.tbDados" store:Type="Tables" store:Schema="dbo" store:Name="tbDados">
+            <DefiningQuery>SELECT 
+      [tbDados].[id] AS [id], 
+      [tbDados].[latitude] AS [latitude], 
+      [tbDados].[longitude] AS [longitude], 
+      [tbDados].[status] AS [status], 
+      [tbDados].[data] AS [data]
+      FROM [dbo].[tbDados] AS [tbDados]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'db7e70c0cf078247eab177a5b0012f25ef.dbo.tbDados' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="tbDados">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="latitude" Type="varchar" MaxLength="50" />
+          <Property Name="longitude" Type="varchar" MaxLength="50" />
+          <Property Name="status" Type="varchar" MaxLength="50" />
+          <Property Name="data" Type="varchar" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db7e70c0cf078247eab177a5b0012f25efModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="db7e70c0cf078247eab177a5b0012f25efEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="tbDados" EntityType="db7e70c0cf078247eab177a5b0012f25efModel.tbDados" />
+        </EntityContainer>
+        <EntityType Name="tbDados">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="latitude" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="longitude" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="status" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="data" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db7e70c0cf078247eab177a5b0012f25efModelStoreContainer" CdmEntityContainer="db7e70c0cf078247eab177a5b0012f25efEntities">
+          <EntitySetMapping Name="tbDados">
+            <EntityTypeMapping TypeName="db7e70c0cf078247eab177a5b0012f25efModel.tbDados">
+              <MappingFragment StoreEntitySet="tbDados">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="latitude" ColumnName="latitude" />
+                <ScalarProperty Name="longitude" ColumnName="longitude" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="data" ColumnName="data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
